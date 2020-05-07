@@ -40,8 +40,9 @@ Si quieres contribuir con código, revisa la [guía de contribución](https://gi
 
 ## License
 
-### Some code by [Dark-WhatsApp UserStyle](https://github.com/vednoc/dark-whatsapp) © vednoc
+### Some code 
+by [Dark-WhatsApp UserStyle](https://github.com/vednoc/dark-whatsapp) © vednoc
 [MIT license](https://github.com/vednoc/dark-whatsapp/blob/master/license)
 
-# This UserStyle
+### This UserStyle
 Code released under the [MIT license](https://raw.githubusercontent.com/indierodo/dark-aula/master/LICENSE).
