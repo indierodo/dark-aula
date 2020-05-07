@@ -17,7 +17,7 @@ _Version 2.1.0. Revisa la página wiki [configuration](https://github.com/indier
 
 Debes instalar [Stylus](https://add0n.com/stylus.html) y luego clic en el siguiente botón:
 
-[![Install directy with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg)](https://raw.githubusercontent.com/vednoc/indierodo/dark-aula/master/wa.user.styl)
+[![Install directy with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg)](https://raw.githubusercontent.com/indierodo/dark-aula/master/au.user.styl)
 
 ### Otros métodos de instalación
 
