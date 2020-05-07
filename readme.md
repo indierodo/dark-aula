@@ -36,4 +36,4 @@ Si quieres contribuir con código, revisa la [guía de contribución](https://gi
 
 ## License
 
-Code released under the [MIT license](https://raw.githubusercontent.com/vednoc/indierodo/dark-aula/master/LICENSE).
+Code released under the [MIT license](https://raw.githubusercontent.com/indierodo/dark-aula/master/LICENSE).
