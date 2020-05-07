@@ -1,5 +1,7 @@
 # Dark-Aula
 
+![preview](https://raw.githubusercontent.com/indierodo/dark-aula/master/images/preview.png)
+
 Modo oscuro para [moodle UAA](https://aulavirtual.uaa.mx), en desarrollo, con propósitos educativos y porque trabajo mucho de noche. Basado en parte en [dark-whatsapp](https://github.com/vednoc/dark-whatsapp). Igual que este, tiene mejoras de visibilidad y ajustes personalizables.
 
 _Version 2.1.0. Revisa la página wiki [configuration](https://github.com/indierodo/dark-aula/wiki/Configuration) para personzalizar a tu gusto._
