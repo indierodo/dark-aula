@@ -1,0 +1,407 @@
+/* ==UserStyle==
+@name           Dark-Aula
+@namespace      https://github.com/indierodo/dark-aula
+@version        1.0.0
+@description    Mejoras de estilo a plataforma moodle de la UAA basado en dark-whatsapp de vednoc
+@author         Rodo
+@preprocessor stylus
+@license      MIT
+
+// Parts of this code - https://github.com/vednoc/dark-whatsapp
+// MIT license https://github.com/vednoc/dark-whatsapp/blob/master/license
+
+==/UserStyle== */
+
+@-moz-document domain("aulavirtual.uaa.mx"), domain("aulavirtualbach.uaa.mx") {
+   
+    :root {
+      --ui-font: 'Segoe UI', 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, Ubuntu, Cantarell, 'Fira Sans', sans-serif;
+      --darker: hsl(226, 14%, 25%);
+      --darkest: hsl(219, 14%, 15%);
+      --main-bg-color: #1f232a;
+      --main-txt-color: hsl(0, 0%, 88%);
+      --section-color: rgba(37, 42, 51, .8);
+      --highlight-color: #7289da;
+      --link-color: #fff;
+      --selected-color: #dcdbdb;
+      --tab-color: #1f232a;
+      --white-shadow: #e4e4e4;
+      --dark-shadow: #333;
+      
+
+      --bg-image: url(https://www.uaa.mx/portal/wp-content/uploads/2019/03/Y6A6397-e1562341796680.jpg);
+    
+      --bg-opacity: 0.6;
+      --bg-blur: 9px;
+      --bg-hue: 320deg;
+      --bg-invert: 0;
+      --radius: 4px;
+    }
+    
+    .invisiblefieldset {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    
+    .navbar .breadcrumb{
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    
+    .path-mod-forum .discussion-nav .prev-discussion:before {
+        content: '◀ ';
+        
+    }
+    
+    .path-mod-forum .discussion-nav .next-discussion:after {
+        content: ' ▶ ';
+    }
+    
+    html {
+        color: var(--main-txt-color)!important;
+        background-image: none;
+        background-color: var(--main-bg-color) !important;
+        overflow-x: hidden;
+    }
+    
+    * {
+        font-family: var(--ui-font);
+    }
+    
+        
+    #page::before {
+        content: "";
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        filter: blur(var(--bg-blur)) opacity(var(--bg-opacity)) invert(var(--bg-invert)) hue-rotate(var(--bg-hue));
+        background-image: var(--bg-image);
+        background-size: cover;
+    }
+    
+    #page {
+        min-height: 100vh!important;
+    }
+    
+    #logoAV,
+    #logoUAA,
+    #completionprogressid,
+    .empty-placeholder-image-lg, 
+    .empty-placeholder-image-sm, 
+    .block_online_users,
+    .loading-icon,
+    #inst42423 {
+        display: none;
+    }
+    
+    .userpicture {
+        border-radius: 50%;
+    }
+    
+    .region-content>div[role=main], .block, .navbar {
+        border: 1px solid var(--darker);
+        border-radius: var(--radius);
+    }
+    
+    .path-course-view .weeks .section, .path-course-view .topics .section, .path-course-view .section td {
+        border-color: var(--darker);
+        border-radius: var(--radius);
+    
+    }
+    
+    
+    .region-content>div[role=main] {
+        padding: 20px;
+        margin-top: -20px;
+    }
+    
+    span {
+        color: var(--main-txt-color)!important;
+    }
+    
+    #region-post {
+        margin-top: -2px;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        color: var(--main-txt-color)!important;
+    }
+    
+    
+    
+    
+    a:hover, a span:hover, .img-text a:hover span, p.tree_item.branch>span:hover {
+        text-decoration: none!important;
+        text-decoration-line: none!important;
+        text-decoration-style: double;
+         color: var(--link-color)!important;
+    }
+    
+    .forumpost.firstpost .row.header {
+        background-color: var(--darkest);
+    }
+    
+    .forumpost > .row {
+        background-color: var(--darker);
+    }
+    
+    
+    
+    .selected a:hover, .selected a span:hover   {
+        text-decoration: none!important;
+        text-decoration-line: none!important;
+        text-decoration-style: double;
+         color: #000!important;
+    }
+    
+    
+    .tabtree .tabrow0 li a:hover > span,  .tabtree .tabrow0 li a:hover *{
+        text-decoration: none;
+        color: #fff!important;
+    }
+    
+    
+    .moodle-actionmenu[data-enhanced].show .menu {
+        position: absolute;
+        text-align: left;
+        z-index: 1000;
+        display: block;
+        background-color: var(--tab-color);
+        border: var(--tab-color);
+        box-shadow: 5px 5px 20px 0 #000;
+    }
+    
+    .jsenabled .usermenu .moodle-actionmenu>.menu .filler {
+        display: block;
+        height: 1px;
+        margin: 9px 1px;
+        overflow: hidden;
+        background-color: #6b6b6b;
+        border-bottom: none;
+    }
+    
+    
+    /* -------header--------- */
+    
+    #page-header {
+        top: 10px;
+        background-image: none!important;
+    }
+    
+    .usermenu {
+        margin-top: -5px!important;
+        margin-bottom: 6px!important;
+    }
+    
+    #page-header::before {
+        background-image: url('https://www.uaa.mx/portal/wp-content/themes/UAAV1/images/uaa-footer.png');
+        background-size: 81px 40px;
+        position: absolute;
+        display: inline-block;
+        width: 81px; 
+        height: 40px;
+        content:"";
+        top: 0px;
+        left: 14px;
+    }
+    
+    #page-header::after {
+        background-image: url('https://aulavirtual.uaa.mx/theme/image.php/aulavirtual/theme/1578097227/logoAV');
+        background-size: 137px 52px;
+        position: absolute;
+        display: inline-block;
+        width: 137px; 
+        height: 38px;
+        content:"";
+        top: 3px;
+        left: 100px;
+        visibility: visible;
+    }
+    
+    /* eliminar espaciado */ 
+    .path-mod-assign div.submissionstatustable, .path-mod-assign div.submissionfull, .path-mod-assign div.submissionlinks, .path-mod-assign div.usersummary, .path-mod-assign div.feedback, .path-mod-assign div.gradingsummary {
+        margin-bottom: 0px!important;
+    }
+    
+    .navbar {
+        padding-top: 0px;
+        color: var(--main-txt-color);
+    }
+    
+    h1, h2, h3 {
+        margin: 0 0 1em 0;
+    }
+    
+    .format-onetopic .onetopic .tab_content {
+        padding: 0px;
+    }
+    
+    #region-main {
+        margin-top: 19px!important;
+    }
+    
+    #page-content {
+        margin-top: -37px!important;
+    }
+    
+    
+    
+    
+    .region-content>*, .navbar {
+        background-color: var(--section-color)!important;
+    }
+    .section, .content, .box, .coursebox {
+        background-color:transparent!important;
+    }
+    
+    .sitetopic .section .activity:hover, .course-content .section .activity:hover {
+        background-color: var(--darker);
+    }
+    
+    .assign, .assign:hover {
+      border: 1px solid yellow;
+      margin-top: 10px!important;
+    }
+    
+    /* arreglo botones navegacion */
+    .block_navigation .block_tree p.hasicon {
+        text-indent: 0px;
+        padding-left: 0px;
+    }
+    
+    .section-navigation {
+        margin-bottom: 10px!important;
+    }
+    
+    .block_navigation {
+        font-size: 8.5pt;
+        height: 420px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    
+    .tabtree {
+        margin-bottom: -16px!important;
+        margin-top: -20px;
+    }
+    
+    .tabrow0 {
+        background: none!important;
+    }
+    
+    .region-content {
+        margin: 0 0 !important;
+    
+    }
+    
+    
+    .skip-block-to {
+        visibility: hidden;
+    }
+    
+    .course-content ul.topics li.section .content {
+        margin: 0px 0 0 0 !important;
+    }
+    
+    
+    
+    .icon.navicon {
+        width: 8px!important;
+        height: 8px!important;
+    }
+    
+    img.icon {
+        padding-right: 0px;
+    }
+    
+    .activity.label h1, .activity.label h2, .activity.label h3, .activity.label h4, .activity.label h5 {
+        border-top: 2px solid #fff;
+        padding-top: 10px;
+    }
+    
+    a.autolink {
+        background: none!important;
+        color: var(--main-txt-color);
+    }
+    
+    .headermenu {
+        margin: 0px;
+    }
+    
+    .header, .navbar {
+        background-image: none;
+        font-size: 9.5pt!important;
+        background-color: var(--tab-color);
+    }
+    
+    .tabtree span {
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 10pt;
+    }
+    
+    .tabtree .tabrow0 li a, 
+    .tabtree .tabrow0 li a > span,
+    .tabtree .tabrow0 li a:hover, 
+    .tabtree .tabrow0 li a:hover > span {
+        background-image: none!important;
+        background-color: var(--tab-color)!important;
+        padding-right: 8px!important;
+        margin: 0 15px 0 15px!important;
+    }
+    
+    .tabrow0 a{
+        box-shadow: 2px -2px 0px var(--white-shadow);
+        border-radius: 5px 5px 0px 0px;
+    }
+    
+    .selected span, .tabtree .tabrow0 li.here a, .tabtree .tabrow0 li.here a > span {
+        text-decoration: none!important;
+        color: var(--selected-color)!important;
+        background-color: var(--highlight-color)!important;
+    }
+    
+    .course-content .single-section .section-navigation {
+        display: block;
+        padding: 0px;
+        margin-top: 5px;
+    }
+    
+    
+    
+    /* tablas */
+    
+    .generaltable .cell {
+        background-color: transparent;
+        border-color: var(--main-txt-color);
+    }
+    
+    table.flexible > tbody > tr:nth-of-type(2n+1), table.generaltable > tbody > tr:nth-of-type(2n+1) {
+        background-color: var(--section-color);
+    }
+    
+    
+    table.flexible > tbody > tr:nth-of-type(2n), table.generaltable > tbody > tr:nth-of-type(2n) {
+        background-color: var(--tab-color);
+    }
+    
+    .path-mod-assign td.submissionnotgraded, .path-mod-assign div.submissionnotgraded {
+        color: var(--main-txt-color);
+        background-color: var(--highlight-color);
+    }
+    
+    .path-grade-report-user .user-grade.generaltable .leveleven, .path-grade-report-user .user-grade.generaltable .levelodd {
+        background-color:  transparent;
+    }
+    
+    .user-grade.generaltable, .grade-navigation {
+        margin-left: 170px;
+    }
+    
+    .crisp-client {
+        display: none!important;
+    }
+    }
