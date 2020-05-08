@@ -4,7 +4,7 @@
 @homepageURL    https://github.com/indierodo/dark-aula
 @supportURL     https://github.com/indierodo/dark-aula/issues
 @updateURL      https://raw.githubusercontent.com/indierodo/dark-aula/master/au.user.styl
-@version        2.1.1
+@version        2.1.2
 @description    Mejoras de estilo a plataforma moodle de la UAA basado en dark-whatsapp de vednoc
 @author         indierodo
 @preprocessor stylus
@@ -60,6 +60,44 @@
   --bg-hue: 320deg;
   --bg-invert: 0;
   --radius: 4px;
+}
+
+img[src="https://aulavirtual.uaa.mx/theme/image.php/aulavirtual/core/1588277604/i/navigationitem"] {
+    display: none;
+}
+
+.modal-container {
+    background-color: var(--darkest);
+    top: 500px;
+}
+
+.modal-header .close {
+    background-image: none;
+    background-color: var(--darker);
+    margin-top: 3px;
+    margin-right: 3px;
+    height: 5px;
+}
+
+.modal-header .close:hover {
+    cursor: pointer;
+}
+
+.modal-header .close::after {
+    content: "✖";
+    z-index: 10;
+}
+
+
+.modal-title {
+    background-color: var(--darker);
+    padding: 5px;
+    margin-right: 30px;
+}
+
+.calendar_event_course {
+    border-color: var(--darker);
+    background-color: var(--darker);
 }
 
 .invisiblefieldset {
