@@ -19,6 +19,7 @@
 @var text     image_url  'Custom background image link' url('https://www.uaa.mx/portal/wp-content/uploads/2019/03/Y6A6397-e1562341796680.jpg')
 
 @var select   app_image  'Custom app background' {
+    'Random background image           ': 'random',
     'Custom background image           ': 'custom',
     'Grey Mountain Pass by Dan Carlson ': 'grey',
     'Original dark-WhatsApp'            : 'dark-wa',
@@ -43,7 +44,10 @@
   --white-shadow: #e4e4e4;
   --dark-shadow: #333;
   
-  if ( app_image == custom ) {
+  if ( app_image == random ) {
+      --bg-image: url('https://source.unsplash.com/collection/3727057/1600x900/daily');
+  }
+  else if ( app_image == custom ) {
     --bg-image: image_url;
   } else if ( app_image ==  dark-wa) {
     --bg-image: url(https://images.unsplash.com/photo-1434569117012-ce134ee1a088?fit=crop&w=1280&h=720&q=80);
