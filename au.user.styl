@@ -509,11 +509,36 @@ table.flexible > tbody > tr:nth-of-type(2n), table.generaltable > tbody > tr:nth
     display: none!important;
 }
 
-
-
 .defaultuserpic{
    filter: brightness(0.4) sepia(1) hue-rotate(140deg) saturate(1) contrast(500%) grayscale(0.7);
 }
 
+table.quizreviewsummary th.cell, table.quizreviewsummary td.cell {
+    background: inherit;
 }
 
+.que .formulation, .que .info, .que .outcome, .que .r0, .que .r1 {
+    background: var(--tab-color);
+}
+
+.que .r0 {
+    background: var(--darker);
+}
+
+.qn_buttons * {
+    color: black!important;
+}
+
+.que.essay .qtype_essay_response.readonly, .attachments {
+    margin: 0 2px 0px 2px;
+    padding: 10px;
+    background-color: var(--darker);
+}
+
+.attachments:before {
+    content: 'Archivos adjuntos:';
+    font-weight: bold;
+    display:block;
+    height: 22px;
+}
+}
