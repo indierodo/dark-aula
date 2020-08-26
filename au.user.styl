@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark-Aula
 @namespace      https://github.com/indierodo/dark-aula
-@version       3.0.0
+@version       3.0.1
 @description    Mejoras de estilo a plataforma moodle de la UAA basado en dark-whatsapp de vednoc
 @author         Rodo
 @preprocessor stylus
@@ -12,136 +12,255 @@
 ==/UserStyle== */
 
 @-moz-document domain("aulavirtual.uaa.mx"), domain("aulavirtualbach.uaa.mx") {
-   
-    :root {
-        --bg-color: #2a2a2e;
-        --txt-color: #d7d1d0;
-        --block-color: #38383d;
-        --active-block-color:#4a4a4f
-    }
-    
-    /* make things dissapear! */
-    .crisp-client {
-        display: none;
-    }
-    
-    .clearfix {
-        padding-top: 8px;
-    }
-    
-    /* set the body background */
-    body {
-        background-color: var(--bg-color);
-        color: var(--txt-color);
-    }
-    
-    span {
-        color:  var(--txt-color)!important;
-    }
-    
-    /* html elements */
-    a,
-    a:hover {
-        color: #fff!important;
-    }
-    
-    /* navbar */
-    .navbar-inner .container-fluid,
-    .navbar-inverse .navbar-inner {
-        background-image: none;
-        background-color: transparent;
-        filter: none;
-        padding: 8px;
-    }
-    
-    .navbar-inner,
-    .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
-        box-shadow: none;
-        -webkit-box-shadow: none;
-    }
-    
-    .navbar-inner .container-fluid {
-        height: auto;
-    }
-    
-    img.small-logo {
-        display: none;
-    }
-    
-    #page-header::before {
-        background-image: url('https://www.uaa.mx/portal/wp-content/themes/UAAV1/images/uaa-footer.png');
-        background-size: 81px 40px;
-        position: absolute;
-        display: inline-block;
-        width: 81px; 
-        height: 40px;
-        content:"";
-        top: 10px;
-        left: 26px;
-    }
-    
-    #page-header::after {
-        background-image: url('https://aulavirtual.uaa.mx/theme/image.php/aulavirtual/theme/1578097227/logoAV');
-        background-size: 137px 52px;
-        position: absolute;
-        display: inline-block;
-        width: 137px; 
-        height: 38px;
-        content:"";
-        top: 14px;
-        left: 120px;
-        visibility: visible;
-    }
-    
-    .navbar-fixed-top, .navbar-fixed-bottom {
-        position: absolute;
-        z-index: 0;
-    }
-    
-    .jsenabled .navbar-inverse .usermenu .moodle-actionmenu.show {
-        background-color: transparent;
-    }
-    
-    .moodle-actionmenu[data-enhanced].show .menu{
-        background-color: var(--block-color);
-    }
-    
-    #page-navbar.clearfix {
-        padding-top: 0px;
-    }
-    
-    .page-context-header .page-header-headings {
-        margin-top: -60px;
-        margin-bottom: 0px;
-    }
-    
-    /* building blocks */
-    #region-main,
-    .breadcrumb,
-    .block,
-    .forumpost,
-    .courses .coursebox.even,
-    .course-content .current {
-        background-color: var(--block-color);
-    }
-    
-    .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus,
-    .nav > li > a:hover, .nav > li > a:focus {
-        background-color: var(--active-block-color);
-    }
-    
-    .btn-link,
-    .btn-link:hover,
-    .btn-link:focus {
-        color: #fff;
-    }
-    
-    .btn {
-        text-shadow: none;
-    }
-    
-    /* customizations */
-    .userpicture {
-        border-radius: 50%;
-    }
+
+   :root {
+       --bg-color: #2a2a2e;
+       --txt-color: #d7d1d0;
+       --block-color: #38383d;
+       --active-block-color:#4a4a4f;
+       --hover-color: #272525;
+       --active-color: #111111;
+   }
+
+   /* make things dissapear! */
+   .crisp-client {
+       display: none;
+   }
+
+   .clearfix {
+       padding-top: 8px;
+   }
+
+   /* set the body background */
+   body {
+       background-color: var(--bg-color);
+       color: var(--txt-color);
+       font-family: 'Ubuntu', 'Roboto', 'Helvetica', 'Calibri', 'Arial', sans-serif;
+   }
+
+   span {
+       color:  var(--txt-color)!important;
+   }
+
+   /* html elements */
+   a,
+   a:hover {
+       color: #fff!important;
+   }
+
+   /* navbar */
+   .navbar-inner .container-fluid,
+   .navbar-inverse .navbar-inner {
+       background-image: none;
+       background-color: transparent;
+       filter: none;
+       padding: 8px;
+   }
+
+   .navbar-inner,
+   .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+       box-shadow: none;
+       -webkit-box-shadow: none;
+   }
+
+   .navbar-inner .container-fluid {
+       height: auto;
+   }
+
+   img.small-logo {
+       display: none;
+   }
+
+   a.small-logo-container::before {
+       background-image: url('https://www.uaa.mx/portal/wp-content/themes/UAAV1/images/uaa-footer.png');
+       background-size: 81px 40px;
+       position: absolute;
+       display: inline-block;
+       width: 81px; 
+       height: 40px;
+       content:"";
+       top: 10px;
+       left: 26px;
+   }
+
+   a.small-logo-container::after {
+       background-image: url('https://aulavirtual.uaa.mx/theme/image.php/aulavirtual/theme/1578097227/logoAV');
+       background-size: 137px 52px;
+       position: absolute;
+       display: inline-block;
+       width: 137px; 
+       height: 38px;
+       content:"";
+       top: 14px;
+       left: 120px;
+       visibility: visible;
+   }
+   a.small-logo-container {
+       display: block;
+       position: absolute;
+       top: 0;
+       left: 0px;
+       width: 220px;
+       height: 60px;
+   }
+
+   .navbar-fixed-top, .navbar-fixed-bottom {
+       position: absolute;
+       z-index: 0;
+   }
+
+   .jsenabled .navbar-inverse .usermenu .moodle-actionmenu.show {
+       background-color: transparent;
+   }
+
+   .moodle-actionmenu[data-enhanced].show .menu{
+       background-color: var(--block-color);
+   }
+
+   #page-navbar.clearfix {
+       padding-top: 0px;
+   }
+
+   .page-context-header .page-header-headings {
+       margin-top: -60px;
+       margin-bottom: 0px;
+   }
+
+   .breadcrumb-nav {
+       border: 1px solid white;
+       border-radius: 4px;
+   }
+
+   /* building blocks */
+   #region-main,
+   .breadcrumb,
+   .block,
+   .forumpost,
+   .courses .coursebox.even,
+   .course-content .current,
+   .filemanager .fp-navbar,
+   .filepicker-filelist, .filemanager-container,
+   .moodleSkin td.mceToolbar, .moodleSkin td.mceStatusbar,
+   .moodleSkin .mceMenuItemTitle a,
+   .moodleSkin .mceListBox .mceText,
+   .moodleSkin table.mceListBoxEnabled:hover .mceText, .moodleSkin .mceListBoxHover .mceText, .moodleSkin .mceListBoxSelected .mceText,
+   .moodleSkin .mceMenu table,
+   .course_category_tree .category > .info
+   {
+       background-color: var(--block-color);
+   }
+
+   .moodleSkin .mceToolbar td + td {
+       background-color: var(--block-color);
+   }
+
+
+
+   .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus,
+   .nav > li > a:hover, .nav > li > a:focus
+   {
+       background-color: var(--active-block-color);
+   }
+
+   .moodleSkin .mceMenu .mceMenuItemEnabled a:hover, .moodleSkin .mceMenu .mceMenuItemActive
+   {
+       background-color: var(--hover-color);
+   }
+
+   .moodleSkin a.mceButtonEnabled:hover{
+       background-image: none;
+       background-color: var(--hover-color);
+   }
+
+   .mceIcon img {
+       filter: invert(100%);
+   }
+
+   .btn-link,
+   .btn-link:hover,
+   .btn-link:focus {
+       color: #fff;
+   }
+
+   .btn {
+       text-shadow: none;
+   }
+
+   #fgroup_id_buttonar {
+       background: transparent;
+   }
+
+   /* messaging */
+   .messaging-area-container .messaging-area .contacts-area .searchtextarea,
+   .messaging-area-container .messaging-area .contacts-area .tabs .tab {
+       background-color: inherit;
+   }
+
+   /* file upload */
+
+   .fp-iconview .fp-filename-field .fp-filename {
+       background: none;
+   }
+
+   .dndupload-arrow {
+       background: url(https://cdn0.iconfinder.com/data/icons/computers-and-development/432/move-48.png) center no-repeat;
+       filter: invert(100%) brightness(60%);
+   }
+
+   /* file upload modal */
+   .moodle-dialogue-base .moodle-dialogue-wrap,
+   .file-picker .fp-content,
+   .file-picker .fp-navbar,
+   table#form td.submit, .form-buttons, .path-admin .buttons, #fitem_id_submitbutton, .fp-content-center form + div, div.backup-section + form {
+       background-color: var(--bg-color)
+   }
+
+   .file-picker .fp-list .fp-repo.active {
+       background-color: var(--active-color)
+   }
+
+   .moodle-dialogue-base .moodle-dialogue .moodle-dialogue-bd {
+       color: var(--text-color);
+   }
+
+   /* calendar modal */
+   .modal,
+   .modal-footer,
+   .modal-container .modal .modal-footer {
+       background-color: var(--block-color)
+   }
+
+   /* login */
+   .passColumn h2 {
+       color: var(--text-color);
+   }
+
+
+   /* customizations */
+   .userpicture {
+       border-radius: 50%;
+   }
+
+   h1, h2, h3, h4, h5, h6 {
+       margin: 0;
+   }
+
+   .course-content .single-section {
+       margin-top: 0;
+   }
+
+   #region-main {
+       padding: 3px 12px;
+   }
+
+   .coursebox {
+       border: none;
+       margin-bottom: 25px;
+   }
+
+   /* CSS hacks */
+   table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody > tr:nth-child(2n+1) > td, table.grading-report tbody > tr:nth-child(2n+1) > td, table#listdirectories tbody > tr:nth-child(2n+1) > td, table.rolecaps tbody > tr:nth-child(2n+1) > td, table.userenrolment tbody > tr:nth-child(2n+1) > td, table#form tbody > tr:nth-child(2n+1) > td, form#movecourses table tbody > tr:nth-child(2n+1) > td, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > td, .forumheaderlist tbody > tr:nth-child(2n+1) > td, table.flexible tbody > tr:nth-child(2n+1) > td, .generaltable tbody > tr:nth-child(2n+1) > td, table#explaincaps tbody > tr:nth-child(2n+1) > th, table#defineroletable tbody > tr:nth-child(2n+1) > th, table.grading-report tbody > tr:nth-child(2n+1) > th, table#listdirectories tbody > tr:nth-child(2n+1) > th, table.rolecaps tbody > tr:nth-child(2n+1) > th, table.userenrolment tbody > tr:nth-child(2n+1) > th, table#form tbody > tr:nth-child(2n+1) > th, form#movecourses table tbody > tr:nth-child(2n+1) > th, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > th, .forumheaderlist tbody > tr:nth-child(2n+1) > th, table.flexible tbody > tr:nth-child(2n+1) > th, .generaltable tbody > tr:nth-child(2n+1) > th,
+   .user-enroller-panel .uep-search-results .users tbody tr:hover > td, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td, table.grading-report tbody tr:hover > td, .forumheaderlist tbody tr:hover > td, .generaltable tbody tr:hover > td, table.flexible tbody tr:hover > td, .category_subcategories tbody tr:hover > td, table#modules tbody tr:hover > td, table#permissions tbody tr:hover > td, .user-enroller-panel .uep-search-results .users tbody tr:hover > th, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th, table.grading-report tbody tr:hover > th, .forumheaderlist tbody tr:hover > th, .generaltable tbody tr:hover > th, table.flexible tbody tr:hover > th, .category_subcategories tbody tr:hover > th, table#modules tbody tr:hover > th, table#permissions tbody tr:hover > th {
+       background-color: transparent;
+   }
 }
