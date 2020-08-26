@@ -2,7 +2,7 @@
 
 ![preview](https://raw.githubusercontent.com/indierodo/dark-aula/master/images/preview.png)
 
-Modo oscuro para [moodle UAA](https://aulavirtual.uaa.mx), en desarrollo, con propósitos educativos y porque trabajo mucho de noche. Basado en parte en [dark-whatsapp](https://github.com/vednoc/dark-whatsapp). Igual que este, tiene mejoras de visibilidad y ajustes personalizables.
+Modo oscuro para [moodle UAA](https://aulavirtual.uaa.mx), en desarrollo, con propósitos educativos y porque trabajo mucho de noche. Tiene mejoras de visibilidad y ajustes personalizables.
 
 ## Características
   - Modo oscuro casi completo.
@@ -39,10 +39,4 @@ Cualquier contribución es muy apreciada.
 Si quieres contribuir con código, revisa la [guía de contribución](https://github.com/indierodo/dark-aula/blob/master/contributing.md).
 
 ## License
-
-### Some code 
-by [Dark-WhatsApp UserStyle](https://github.com/vednoc/dark-whatsapp) © vednoc
-[MIT license](https://github.com/vednoc/dark-whatsapp/blob/master/license)
-
-### This UserStyle
 Code released under the [MIT license](https://raw.githubusercontent.com/indierodo/dark-aula/master/LICENSE).
