@@ -9,7 +9,7 @@ Modo oscuro para [moodle UAA](https://aulavirtual.uaa.mx), en desarrollo, con pr
   - Colores personalizables
   - Fondo personalizable
 
-_Version 2.1.1 Revisa la página wiki [configuration](https://github.com/indierodo/dark-aula/wiki/Configuration) para más información._
+_Version 3.0.1 Revisa la página wiki [configuration](https://github.com/indierodo/dark-aula/wiki/Configuration) para más información._
 
 ## Instalación
 
