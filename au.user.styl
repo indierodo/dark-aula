@@ -23,7 +23,9 @@
    }
 
    /* make things dissapear! */
-   .crisp-client {
+   .crisp-client,
+   div[data-block="online_users"], 
+   #inst42423 {
        display: none;
    }
 
@@ -93,7 +95,6 @@
        content:"";
        top: 14px;
        left: 120px;
-       visibility: visible;
    }
    a.small-logo-container {
        display: block;
@@ -108,6 +109,7 @@
        position: absolute;
        z-index: 0;
    }
+   
 
    .jsenabled .navbar-inverse .usermenu .moodle-actionmenu.show {
        background-color: transparent;
@@ -189,6 +191,21 @@
    #fgroup_id_buttonar {
        background: transparent;
    }
+   
+   
+   .card, .card-header {
+    background-color: inherit;
+}
+   
+   /* calendar */
+
+.path-calendar .maincalendar .eventlist .event .description {
+    background-color: inherit;
+}
+
+.path-calendar .maincalendar .eventlist .event .name {
+    font-weight: inherit;
+}
 
    /* messaging */
    .messaging-area-container .messaging-area .contacts-area .searchtextarea,
@@ -237,7 +254,7 @@
 
 
    /* customizations */
-   .userpicture {
+   .userpicture, .profilepicture {
        border-radius: 50%;
    }
 
@@ -257,10 +274,66 @@
        border: none;
        margin-bottom: 25px;
    }
+   
+   
+   /* popover */
 
-   /* CSS hacks */
+.popover-region-container, .popover-region-footer-container {
+    background-color: var(--block-color);
+}
+   
+   /* opcion multiple */
+
+.que .info,
+.que .formulation, .que .outcome, .que .comment,
+table.quizreviewsummary th.cell, table.quizreviewsummary td.cell,
+ .formulation .incorrect,
+.formulation .correct{
+    background-color: inherit;
+    color: inherit;
+    text-shadow: none;
+}
+
+.path-mod-quiz #mod_quiz_navblock .qnbutton {
+    background-color: var(--block-color);
+}
+
+/* homework */ 
+
+.path-mod-assign td.submissionnotgraded, .path-mod-assign div.submissionnotgraded {
+    color: var(--text-color);
+    background-color: inherit;
+}
+
+.path-mod-assign td.submissionstatussubmitted, .path-mod-assign div.submissionstatussubmitted, .path-mod-assign a:link.submissionstatussubmitted {
+    color: var(--text-color);
+}
+
+
+/* tablero */
+
+.block_myoverview .well, .well{
+    background-color: inherit;
+}
+
+
+   /* CSS hacks and bugfixes */
    table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody > tr:nth-child(2n+1) > td, table.grading-report tbody > tr:nth-child(2n+1) > td, table#listdirectories tbody > tr:nth-child(2n+1) > td, table.rolecaps tbody > tr:nth-child(2n+1) > td, table.userenrolment tbody > tr:nth-child(2n+1) > td, table#form tbody > tr:nth-child(2n+1) > td, form#movecourses table tbody > tr:nth-child(2n+1) > td, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > td, .forumheaderlist tbody > tr:nth-child(2n+1) > td, table.flexible tbody > tr:nth-child(2n+1) > td, .generaltable tbody > tr:nth-child(2n+1) > td, table#explaincaps tbody > tr:nth-child(2n+1) > th, table#defineroletable tbody > tr:nth-child(2n+1) > th, table.grading-report tbody > tr:nth-child(2n+1) > th, table#listdirectories tbody > tr:nth-child(2n+1) > th, table.rolecaps tbody > tr:nth-child(2n+1) > th, table.userenrolment tbody > tr:nth-child(2n+1) > th, table#form tbody > tr:nth-child(2n+1) > th, form#movecourses table tbody > tr:nth-child(2n+1) > th, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > th, .forumheaderlist tbody > tr:nth-child(2n+1) > th, table.flexible tbody > tr:nth-child(2n+1) > th, .generaltable tbody > tr:nth-child(2n+1) > th,
    .user-enroller-panel .uep-search-results .users tbody tr:hover > td, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td, table.grading-report tbody tr:hover > td, .forumheaderlist tbody tr:hover > td, .generaltable tbody tr:hover > td, table.flexible tbody tr:hover > td, .category_subcategories tbody tr:hover > td, table#modules tbody tr:hover > td, table#permissions tbody tr:hover > td, .user-enroller-panel .uep-search-results .users tbody tr:hover > th, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th, table.grading-report tbody tr:hover > th, .forumheaderlist tbody tr:hover > th, .generaltable tbody tr:hover > th, table.flexible tbody tr:hover > th, .category_subcategories tbody tr:hover > th, table#modules tbody tr:hover > th, table#permissions tbody tr:hover > th {
        background-color: transparent;
    }
+}
+
+
+.yui3-skin-sam .yui3-datatable-even .yui3-datatable-cell,
+.yui3-skin-sam .yui3-datatable-odd .yui3-datatable-cell  {
+    background-color: transparent;
+}
+
+.Wirisformula {
+  filter: invert(80%);
+}
+
+.calendarwrapper {
+    position: initial;
 }
